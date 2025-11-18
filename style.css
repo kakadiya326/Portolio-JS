@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    background-color: lightgray;
+    background: #0d0d0d;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    height: 15vh;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background: rgba(20, 20, 20, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.main-content {
+    padding-top: 25vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-content::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.4), rgba(0, 0, 0, 0.1));
+    border-radius: 50%;
+    top: -150px;
+    left: -200px;
+    z-index: -1;
+    filter: blur(90px);
+}
+
+.main-content::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 255, 166, 0.4), rgba(0, 0, 0, 0.1));
+    border-radius: 50%;
+    bottom: -150px;
+    right: -150px;
+    z-index: -1;
+    filter: blur(90px);
+
+}
+
+.leftnav,
+.rightnav {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.leftnav a,
+.rightnav a {
+    position: relative;
+}
+
+.rightnav {
+    justify-content: end;
+    gap: 40px;
+}
+
+.leftnav a::after,
+.rightnav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #00ffff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.leftnav a:hover::after,
+.rightnav a:hover::after {
+    transform: scaleX(1);
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #00ffff;
+    position: relative;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffa6;
+    text-shadow: 0 0 8px #00ffa6;
+}
+
+.data {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cardMain {
+    width: 80%;
+    height: 70vh;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    background: rgba(30, 30, 30, 0.8);
+    z-index: 0;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: -5px 5px 30px rgba(0, 255, 255, 0.25);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+}
+
+.data img {
+    width: 250px;
+    height: 250px;
+}
+
+.leftdata {
+    width: 40%;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    z-index: 1;
+}
+
+.leftdata img {
+    padding: 20px;
+    background: whitesmoke;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid black;
+}
+
+.mydata {
+    width: 60%;
+    margin: 4% 0px;
+    color: white;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    color: black;
+    border-radius: 35px;
+    padding: 20px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.mydata h1 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #00ffff, #00ffa6);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.mydata h3 {
+    background: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.mydata p {
+    text-indent: 80px;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #e0ffff;
+}
+
+/* Education Section */
+.education {
+    position: relative;
+    width: 80%;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.eduCard::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    background-color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+.eduTitle{
+    position: relative;
+}
+.eduCard .eduTitle::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    left: -28px;
+    background-color: #00ffff;
+    border: 3px solid  rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 18px rgba(0, 255, 255, 0.3);
+}
+.eduTitle{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.eduCard {
+    background: -webkit-repeating-linear-gradient( );
+    /* border-bottom: 2px solid rgba(0, 255, 255, 0.3); */
+    border-top: 2px solid rgba(0, 255, 255, 0.3);
+    border-right: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 0px 50px 50px 0px;
+}
