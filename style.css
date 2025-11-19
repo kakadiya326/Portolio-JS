@@ -226,10 +226,12 @@ nav a:hover {
     background-color: #00ffff;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
-.eduTitle{
+
+.eduTitle {
     position: relative;
 }
-.eduCard .eduTitle::before{
+
+.eduCard .eduTitle::before {
     content: "";
     width: 15px;
     height: 15px;
@@ -238,17 +240,18 @@ nav a:hover {
     top: 3px;
     left: -28px;
     background-color: #00ffff;
-    border: 3px solid  rgba(0, 255, 255, 0.4);
+    border: 3px solid rgba(0, 255, 255, 0.4);
     box-shadow: 0 0 18px rgba(0, 255, 255, 0.3);
 }
-.eduTitle{
+
+.eduTitle {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .eduCard {
-    background: -webkit-repeating-linear-gradient( );
+    background: -webkit-repeating-linear-gradient();
     /* border-bottom: 2px solid rgba(0, 255, 255, 0.3); */
     border-top: 2px solid rgba(0, 255, 255, 0.3);
     border-right: 2px solid rgba(0, 255, 255, 0.3);
@@ -257,7 +260,7 @@ nav a:hover {
 
 /* Skills */
 
-.skills{
+.skills {
     width: 85%;
     margin-bottom: 60px;
     display: flex;
@@ -265,7 +268,8 @@ nav a:hover {
     gap: 20px;
 }
 
-.softSkills, .proSkills{
+.softSkills,
+.proSkills {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -274,7 +278,8 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 }
-.skillCard{
+
+.skillCard {
     width: 30%;
     height: max-content;
     display: flex;
@@ -283,4 +288,45 @@ nav a:hover {
     box-sizing: border-box;
     border-radius: 30px;
     border: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+/* Projects */
+.projects {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.projectCard {
+    width: 40%;
+    height: max-content;
+    border-radius: 80px 80px 0 0;
+    padding: 30px;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.projectTitle {
+    margin-bottom: 10px;
+}
+
+.projectCard .projectDescrip{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.projectCard:hover .projectDescrip{
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
 }
