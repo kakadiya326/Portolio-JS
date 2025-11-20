@@ -5,6 +5,11 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     overflow-x: hidden;
+    line-break: anywhere;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 nav {
@@ -265,6 +270,7 @@ nav a:hover {
     margin-bottom: 60px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -302,9 +308,9 @@ nav a:hover {
 .projectCard {
     width: 40%;
     height: max-content;
-    border-radius: 80px 80px 0 0;
     padding: 30px;
     border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 80px 80px 0 0;
     transition: all 0.3s ease;
     overflow: hidden;
 }
@@ -313,20 +319,117 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-.projectCard .projectDescrip{
+.projectCard .projectDescrip {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     transition: all 0.4s ease;
 }
 
-.projectCard:hover .projectDescrip{
+.projectCard:hover .projectDescrip {
     max-height: 500px;
     opacity: 1;
     margin-top: 10px;
 }
 
-li a{
+li a {
     text-decoration: none;
     color: white;
+}
+
+/* Achievements */
+.achievements {
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.achieCard {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    color: #00ffff;
+    background: rgba(0, 255, 255, 0.2);
+    /* background: linear-gradient(to left,rgba(0, 255, 255, 0.6),rgba(85, 255, 255, 0.5),rgba(178, 255, 255, 0.4),rgba(255, 255, 255, 0.3)); */
+    padding: 30px;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    border-radius: 80px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.achieTitle {
+    width: fit-content;
+    border: 2px solid black;
+    background-color: azure;
+    color: black;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.imgWrapper {
+    width: 100%;
+    height: 300px;
+    background: #0d0d0d;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgWrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    transform: scale(1.2);
+    background-image: inherit;
+    /* actual image is used as background  */
+}
+
+.imgWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    transition: all 1s ease;
+}
+
+.imgWrapper img:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        color: #00ffff;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(20,20,20,0.95);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+    }
+
+    nav.open {
+        display: flex;
+    }
 }
