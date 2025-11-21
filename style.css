@@ -143,7 +143,7 @@ nav a:hover {
     border-top-left-radius: 60px;
     border-bottom-left-radius: 60px;
     display: flex;
-    gap: 20px;
+    gap: 0px;
     backdrop-filter: blur(8px);
     box-shadow: -5px 5px 30px rgba(0, 255, 255, 0.25);
     border: 1px solid rgba(0, 255, 255, 0.15);
@@ -157,12 +157,11 @@ nav a:hover {
 .leftdata {
     width: 40%;
     height: 70vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    gap: 0px;
     z-index: 1;
 }
 
@@ -280,6 +279,7 @@ nav a:hover {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
+    line-break: normal;
 }
 
 .softSkills,
@@ -414,6 +414,10 @@ li a {
 }
 
 @media screen and (max-width: 600px) {
+    * {
+        font-size: 10px;
+    }
+
     .menu-toggle {
         display: block;
         position: sticky;
@@ -453,27 +457,96 @@ li a {
 
     .data {
         flex-direction: column;
+
     }
 
     .cardMain {
         width: 80%;
         height: 70vh;
-        position: relative;
-        top: 50%;
-        right: 0px;
-        transform: translateY(-50%);
-        display: flex;
+        top: 10%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 12px;
     }
 
     .data img {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
     }
 
+    .mydata {}
 
+    .mydata h1 {
+        margin-top: 2px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
 
+    .mydata h3 {
+        font-size: 12px;
+    }
+
+    .mydata p {
+        text-indent: 80px;
+        text-align: justify;
+        line-height: 1.6;
+        font-size: 10px;
+        color: #e0ffff;
+    }
+
+    #Education,
+    #skills,
+    #projects,
+    #achievements {
+        border: 2px double rgba(0, 255, 255, 0.4);
+        box-shadow: 0 0 18px rgba(0, 255, 255, 0.3);
+        border-radius: 20px;
+        font-size: 16px;
+        padding: 20px 40px;
+        box-sizing: border-box;
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);;
+    }
+
+    .eduCard h2,
+    .skillTitle,
+    .projectTitle,
+    .achieTitle {
+        font-size: 12px;
+    }
+
+    .uniName,
+    .per,
+    .skillDescrip,
+    .projectDescrip,
+    .achieDescrip {
+        font-size: 10px;
+    }
+
+    .softSkills,
+    .proSkills {
+        gap: 20px;
+    }
+
+    .skillCard {
+        width: 100%;
+    }
+
+    .projectCard {
+        width: 100%;
+        height: min-content;
+        text-align: center;
+    }
+
+    .achieCard {
+        width: 90%;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 40px;
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    .imgWrapper {
+        width: 90%;
+        height: 200px;
+    }
 }
