@@ -23,19 +23,19 @@ footer i {
     text-shadow: 0 0 8px #00ffa6;
 }
 
-footer i:hover{
+footer i:hover {
     text-shadow: 0 0 0px #00ffa6;
     color: #00ffa6;
 }
 
-footer h1{
+footer h1 {
     margin-left: 30px;
     font-size: 25px;
     word-spacing: 5px;
     letter-spacing: 2.5px;
 }
 
-footer h1 .glow{
+footer h1 .glow {
     font-size: 40px;
     color: #00ffa6;
     text-shadow: 0 0 20px #00ffa6;
@@ -605,5 +605,23 @@ li a {
     .imgWrapper {
         width: 90%;
         height: 200px;
+    }
+
+    /* Footer Section */
+
+    footer {
+        gap: 10px;
+    }
+
+    footer i {
+        font-size: 14px;
+    }
+
+    footer h1 {
+        font-size: 14px;
+    }
+
+    footer h1 .glow {
+        font-size: 18px;
     }
 }
