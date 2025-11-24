@@ -117,7 +117,7 @@ function createSkillCard(title, points) {
 
 //------------------------
 
-// Proect Code
+// Project Code
 
 //------------------------
 

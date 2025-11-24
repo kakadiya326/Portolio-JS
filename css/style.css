@@ -543,9 +543,7 @@ li a {
         font-size: var(--font-subtitle);
     }
 
-    .mydata h3 {
-        font-size: var(--font-description);
-    }
+
 
     .mydata p {
         text-indent: 80px;
@@ -568,6 +566,34 @@ li a {
         width: 100%;
         height: min-content;
         text-align: center;
+    }
+
+    .projectTitle{
+        font-size: var(--font-small);
+    }
+    .mydata h3,
+
+    .skillTitle,
+    .achieTitle {
+        margin-bottom: 10px;
+        font-size: var(--font-description);
+    }
+
+    .mydata p,
+    .skillDescrip,
+    .projectDescrip,
+    .achieCard p {
+        font-size: var(--font-small);
+    }
+
+    .eduTitle {
+        font-size: var(--font-small);
+        line-break: auto;
+    }
+
+    .eduCard .uniName,
+    .eduCard .per {
+        font-size: 0.8rem;
     }
 
     .achieCard {
@@ -594,10 +620,10 @@ li a {
     }
 
     footer h1 {
-        font-size: var(--font-description);
+        font-size: var(--font-small);
     }
 
     footer h1 .glow {
-        font-size: var(--font-heading);
+        font-size: var(--font-subtitle);
     }
 }
