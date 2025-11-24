@@ -7,6 +7,21 @@ body {
     line-break: anywhere;
 }
 
+#Education,
+#skills,
+#projects,
+#achievements {
+    border: 2px double rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    text-decoration: underline;
+    margin: 40px 0px;
+}
+
 footer {
     width: 100%;
     height: 10vh;
@@ -227,6 +242,7 @@ nav a:hover {
     border: 1px solid rgba(0, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+
 }
 
 .mydata h1 {
@@ -246,13 +262,14 @@ nav a:hover {
     text-align: center;
     padding: 10px;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    font-size: var(--font-subtitle);
 }
 
 .mydata p {
     text-indent: 80px;
     text-align: justify;
     line-height: 1.6;
-    font-size: 18px;
+    font-size: var(--font-description);
     color: #e0ffff;
 }
 
@@ -283,6 +300,7 @@ nav a:hover {
 
 .eduTitle {
     position: relative;
+    font-size: var(--font-title);
 }
 
 .eduCard .eduTitle::before {
@@ -306,10 +324,13 @@ nav a:hover {
 
 .eduCard {
     background: -webkit-repeating-linear-gradient();
-    /* border-bottom: 2px solid rgba(0, 255, 255, 0.3); */
     border-top: 2px solid rgba(0, 255, 255, 0.3);
     border-right: 2px solid rgba(0, 255, 255, 0.3);
     border-radius: 0px 50px 50px 0px;
+}
+
+.eduCard div {
+    font-size: var(--font-description);
 }
 
 /* Skills */
@@ -346,6 +367,10 @@ nav a:hover {
     border: 2px solid rgba(0, 255, 255, 0.3);
 }
 
+.skillTitle {
+    font-size: var(--font-title);
+}
+
 /* Projects */
 
 
@@ -369,13 +394,14 @@ nav a:hover {
 
 .projectTitle {
     margin-bottom: 10px;
+    font-size: var(--font-title);
 }
 
 .projectCard .projectDescrip {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all 0.9s ease-in-out;
 }
 
 .projectCard:hover .projectDescrip {
@@ -389,77 +415,58 @@ li a {
     color: white;
 }
 
+
 /* Achievements */
 .achievements {
     width: 90%;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 20px;
     margin-bottom: 40px;
 }
 
 .achieCard {
-    width: 90%;
+    width: 40%;
+    height: max-content;
+    position: relative;
     display: flex;
     flex-direction: column;
-    color: #00ffff;
+    color: black;
     background: rgba(0, 255, 255, 0.2);
+    object-fit: cover;
     padding: 30px;
     border: 1px solid rgba(0, 255, 255, 0.4);
     border-radius: 80px;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-.achieTitle {
-    width: fit-content;
-    border: 2px solid black;
-    background-color: azure;
-    color: black;
-    padding: 10px;
-    border-radius: 40px;
-}
-
-.imgWrapper {
-    width: 100%;
-    height: 300px;
-    background: #0d0d0d;
-    border-radius: 10px;
-    position: relative;
     overflow: hidden;
 }
 
-.imgWrapper::before {
+.achieCard::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    filter: blur(20px);
-    transform: scale(1.2);
-    background-image: inherit;
-    /* actual image is used as background  */
-}
-
-.imgWrapper img {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    background: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(20px);
+    z-index: 1;
+}
+
+
+.achieCard * {
     position: relative;
     z-index: 2;
-    transition: all 1s ease;
 }
 
-.imgWrapper img:hover {
-    transform: scale(1.2);
-}
+
 
 @media screen and (max-width: 600px) {
-    * {
-        font-size: 10px;
-    }
 
     .menu-toggle {
         display: block;
@@ -512,7 +519,6 @@ li a {
 
     .data {
         flex-direction: column;
-
     }
 
     .cardMain {
@@ -534,49 +540,19 @@ li a {
     .mydata h1 {
         margin-top: 2px;
         margin-bottom: 5px;
-        font-size: 14px;
+        font-size: var(--font-subtitle);
     }
 
     .mydata h3 {
-        font-size: 12px;
+        font-size: var(--font-description);
     }
 
     .mydata p {
         text-indent: 80px;
         text-align: justify;
         line-height: 1.6;
-        font-size: 10px;
+        font-size: var(--font-small);
         color: #e0ffff;
-    }
-
-    #Education,
-    #skills,
-    #projects,
-    #achievements {
-        border: 2px double rgba(0, 255, 255, 0.4);
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-        border-radius: 20px;
-        font-size: 16px;
-        padding: 10px 100px;
-        box-sizing: border-box;
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-        text-decoration: underline;
-        margin: 40px 0px;
-    }
-
-    .eduCard h2,
-    .skillTitle,
-    .projectTitle,
-    .achieTitle {
-        font-size: 12px;
-    }
-
-    .uniName,
-    .per,
-    .skillDescrip,
-    .projectDescrip,
-    .achieDescrip {
-        font-size: 10px;
     }
 
     .softSkills,
@@ -614,14 +590,14 @@ li a {
     }
 
     footer i {
-        font-size: 14px;
+        font-size: var(--font-subtitle);
     }
 
     footer h1 {
-        font-size: 14px;
+        font-size: var(--font-description);
     }
 
     footer h1 .glow {
-        font-size: 18px;
+        font-size: var(--font-heading);
     }
 }

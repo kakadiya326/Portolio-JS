@@ -1,0 +1,49 @@
+:root {
+
+    /* ------------------------------
+       FONT SIZES
+    ------------------------------ */
+    --font-heading: 2.3rem;
+    --font-title: 1.6rem;
+    --font-subtitle: 1.4rem;
+    --font-description: 1rem;
+    --font-small: 0.85rem;
+
+    /* ------------------------------
+       FONT WEIGHTS
+    ------------------------------ */
+    --weight-bold: 700;
+    --weight-semibold: 600;
+    --weight-medium: 500;
+    --weight-normal: 400;
+
+    /* ------------------------------
+       COLORS
+    ------------------------------ */
+    --primary: #00ffa6;
+    --secondary: #0d0d0d;
+    --text-light: #f5f5f5;
+    --text-gray: #bfbfbf;
+
+    /* ------------------------------
+       BOX SHADOWS
+    ------------------------------ */
+    --shadow-soft: 0px 0px 10px rgba(0, 255, 166, 0.4);
+    --shadow-medium: 0px 0px 20px rgba(0, 255, 166, 0.6);
+    --shadow-hard: 0px 0px 30px rgba(0, 255, 166, 0.8);
+
+    /* ------------------------------
+       BORDER RADIUS
+    ------------------------------ */
+    --radius-small: 6px;
+    --radius-medium: 12px;
+    --radius-large: 20px;
+
+    /* ------------------------------
+       SPACING
+    ------------------------------ */
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 24px;
+    --space-xl: 40px;
+}
